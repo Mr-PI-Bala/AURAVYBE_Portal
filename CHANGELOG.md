@@ -1,5 +1,15 @@
 ﻿# CHANGELOG
 
+## [0.1.2] - 2026-06-11
+
+### Added
+- `AURAVYBE docs/IAR/MERITSTORE.md` — consolidated IAR handoff for meritstore alpha (PRD, HLD, acceptance, appendix)
+- MERIT L1 §0.D / §0.E reflected in L3 §III (IAR code of honor; marketing portal exemplar)
+
+### Changed
+- `AURAVYBE docs/INDEX.md` — single IAR pointer
+- `AURAVYBE.instructions` — meritstore alpha + §0.E poster-child note
+
 ## [0.1.1] - 2026-06-11
 
 ### Changed

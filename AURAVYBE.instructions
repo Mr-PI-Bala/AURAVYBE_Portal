@@ -28,3 +28,13 @@ Follow MERIT **Â§G** hygiene and **Â§VIII.F** unless the user scopes work as
 
 **Chat:** Post MERIT **Â§H** 3-3 after closeout (**Done** Â· **State** Â· **Next**).
 
+---
+
+## III. MERITSTORE ALPHA CUSTOMER
+
+- IAR handoff (sole binding scope): `AURAVYBE docs/IAR/MERITSTORE.md` — MERIT L1 §0.D (no side deals)
+- This repo is MERIT L1 §0.E **marketing portal exemplar** (`{Product}_Portal` pattern)
+- Implementation repo: `AgentDraven/meritstore` (not this repo)
+- Registration URL (after §3.7 ACCEPT): `meritstore.vercel.app/auravybe/register`
+- Phase 1 payments: **Square** only; Stripe/RevenueCat deferred
+
