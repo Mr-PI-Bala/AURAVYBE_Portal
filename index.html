@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="ai-context-ingest" content="disallow">
+    <meta name="ccbot" content="nocrawl">
+    <meta name="gptbot" content="nofollow">
+    <meta name="anthropic-ai" content="noindex, nofollow">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURAVYBE | Summer AI & Startup Labs</title>
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161f30;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --primary: #06b6d4;    /* Neon Cyan - VYBE */
+            --secondary: #a855f7;  /* Neon Violet - AURA */
+            --accent: #10b981;     /* Emerald Green */
+            --warning: #f59e0b;    /* Amber */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px 20px 120px 20px; /* Extra bottom cushion to protect prose text from navbar overlap */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Banner with Layered Background Image */
+        #home {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, rgba(11, 15, 25, 0.85), rgba(22, 31, 48, 0.9)), url('img/auravybe_banner.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(6, 182, 212, 0.15);
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        #home h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            font-weight: 500;
+        }
+
+        /* Responsive Top Split Architectural Grid Layout */
+        .top-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 850px) {
+            .top-split {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        #concept h2 { color: var(--primary); }
+        #missions h2 { color: var(--secondary); }
+        #background h2 { color: var(--warning); }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        /* Feature List Framework Layer */
+        .feature-list {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: "⚡";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Logistics Dashboard Styles */
+        .logistics-box {
+            background: rgba(6, 182, 212, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed rgba(6, 182, 212, 0.2);
+            margin-top: 20px;
+        }
+
+        .logistics-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .logistics-box p {
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        /* Card Mechanics for Active Open Windows */
+        .block-card {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .block-card:last-child {
+            margin-bottom: 0;
+            border-left-color: var(--accent);
+        }
+
+        .block-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .block-card .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .block-card ul {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 0.95rem;
+        }
+
+        .block-card li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        .block-card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* July Double-Track Pipeline Layout Column Blueprint */
+        .pipeline-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 850px) {
+            .pipeline-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pipeline-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pipeline-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .pipeline-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            opacity: 0.85;
+        }
+
+        .pipeline-item {
+            background: rgba(0, 0, 0, 0.15);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .pipeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .pipeline-item strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .pipeline-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        /* Call To Action Mechanics */
+        .bio-cta {
+            text-align: center;
+            margin: 40px auto 20px auto;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            font-weight: 700;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+        }
+
+        /* Subtle Bottom Promo Row */
+        .vip-pill-wrapper {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .vip-pill-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            background: rgba(168, 85, 247, 0.05);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(168, 85, 247, 0.15);
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .vip-pill-link:hover {
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        /* Horizontal Static Dock Navbar Settings */
+        .bottom-dock {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0e1726;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            z-index: 9999;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.6);
+        }
+
+        .dock-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dock-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .dock-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s ease;
+        }
+
+        .dock-links a:hover { color: var(--primary); }
+
+        .dock-pill {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white !important;
+            padding: 6px 14px;
+            border-radius: 15px;
+            font-size: 0.85rem !important;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+        }
+
+        @media (max-width: 780px) {
+            .dock-links a span { display: none; } 
+            .dock-links a { font-size: 1.2rem; }
+            .dock-pill { font-size: 0.85rem !important; }
+            .dock-pill span { display: inline !important; }
+        }
+
+        footer { 
+            text-align: center; 
+            border-top: 1px solid rgba(255, 255, 255, 0.05); 
+            padding-top: 20px; 
+            margin-top: 25px; 
+        }
+        
+        .legal-footer { 
+            font-size: 5px; 
+            color: #4b5563; 
+            line-height: 1.2; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header id="home">
+            <h1>AURAVYBE</h1>
+            <p>Turn play into power: Master AI Vibe Coding, own the game studio, and launch real startups as future-ready tech entrepreneurs.</p>
+        </header>
+
+        <div class="top-split">
+            
+            <section id="concept">
+                <h2>Concept & Mission 🚀</h2>
+                <ul class="feature-list">
+                    <li><strong>The VYBE of AI Coding:</strong> We completely eliminate boring, repetitive code syntax homework drills. Instead, students dive straight into "Vibe Coding"—the advanced practice of directing top-tier autonomous software agents using natural language.</li>
+                    <li><strong>The AURA of Entrepreneurship:</strong> Every single creative development milestone is framed inside a realistic business scenario. Students learn to handle cloud infrastructure budgets, track live user metric arrays, and design real monetization platforms.</li>
+                    <li><strong>Network & Collaborative Pools:</strong> Both Middle and High School students are fully eligible to join. Parents are welcome and highly encouraged to share these technical labs with local friends to unlock additional cohort spaces!</li>
+                </ul>
+
+                <div class="logistics-box">
+                    <h3>⚙️ Quick Logistics Dashboard</h3>
+                    <p>🔹 <strong>Sponsorship Contribution:</strong> $45 per day ($135 total for a complete 3-day block). 10% multi-block discount + stackable 10% sibling discount automatically active.</p>
+                    <p>🔹 <strong>Policy:</strong> Because each schedule window is cumulative, registration requires a complete 3-day contiguous block commitment.</p>
+                    <p>🔹 <strong>Hardware Requirements:</strong> Students are strictly mandated to bring their own personal Windows or Mac laptop to every session.</p>
+                    <p>🔹 <strong>Account Infrastructure:</strong> Registered accounts must complete a free "GitHub for Education" sign-up sequence prior to Day 1.</p>
+                    <p>🔹 <strong>Location Horizon:</strong> All sessions are hosted locally right here within Brentwood.</p>
+                </div>
+            </section>
+
+            <section id="missions">
+                <h2>Missions Open 🎮</h2>
+                
+                <div class="block-card">
+                    <h3>🎮 Retro Arcade & AI Dungeon Master</h3>
+                    <span class="date">🗓️ Block 1: June 16, 17, & 18 (9:00 AM – 12:00 PM)</span>
+                    <ul>
+                        <li><strong>Objective:</strong> Build your own custom 8-bit retro gaming lobby and command AI models to wire up choice-driven sandbox maps to play with your friends. *(Parents: Roster tracks early, space is nearly full).*</li>
+                        <li><strong>The Challenge:</strong> Students host a live browser arcade room on GitHub and deploy Cursor IDE to engineer an RPG with custom AI rules.</li>
+                        <li><strong>The Skillset:</strong> HTML/CSS layout structures, live cloud development environments, and automated local workspace AI indexing.</li>
+                    </ul>
+                </div>
+
+                <div class="block-card">
+                    <h3>🕹️ Magic 8-Ball Easter Egg Cheat Codes</h3>
+                    <span class="date">🗓️ Block 2: June 23, 24, & 25 (9:00 AM – 12:00 PM)</span>
+                    <ul>
+                        <li><strong>Objective:</strong> Break into backend execution layers and forge an automated data pipeline that lets players inject hidden cheat-code loops into live apps. *(Parents: Seats are currently available).*</li>
+                        <li><strong>The Challenge:</strong> Build a hidden backend server API that interacts as a video game cheat-code engine to instantly fetch game data.</li>
+                        <li><strong>The Skillset:</strong> Node.js application routing, structured JSON data architecture, and multi-client request synchronization loops.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <section style="margin-bottom: 40px;">
+            <h2>July Preview (Split Daily Missions) 🔮</h2>
+            <p style="color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem;">
+                June afternoon spaces are officially locked. July introduces a two-column balance: morning technical execution tracks paired with afternoon founder operation tracks. 
+            </p>
+            
+            <div class="pipeline-wrapper">
+                
+                <div class="pipeline-column">
+                    <h4 style="color: var(--primary);">🌅 Morning: VYBE Coding Sessions (9AM – 12PM)</h4>
+                    <img src="img/vybe_morning.png" alt="July Coding Blueprint" class="pipeline-img">
+                    
+                    <div class="pipeline-item">
+                        <strong>🤖 The Minecraft-Style AI Bot Army</strong>
+                        <p>Kids script a fleet of digital AI workers to build an entire game map, learning agentic automation in a cutting-edge Coding session (ala OpenClaw / Hermes Agents).</p>
+                    </div>
+                    <div class="pipeline-item">
+                        <strong>📟 Cyberpunk Terminal Hackers: Bug Hunt</strong>
+                        <p>Students enter a raw command terminal under a ticking clock to patch files, learning system diagnostics and advanced Coding (ala Claude Code / System CLI).</p>
+                    </div>
+                    <div class="pipeline-item">
+                        <strong>📚 The Secret AI Game Wiki</strong>
+                        <p>Kids build a factual custom chatbot that instantly references hundreds of pages of game lore, learning database architecture in an advanced Coding lab (ala Vector DBs / RAG).</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-column">
+                    <h4 style="color: var(--secondary);">🔮 Afternoon: AURA Startup Operations (1PM – 4PM)</h4>
+                    <img src="img/aura_afternoon.png" alt="July Startup Infrastructure" class="pipeline-img">
+                    
+                    <div class="pipeline-item">
+                        <strong>🪙 The Fortnite-Style Digital V-Buck Shop</strong>
+                        <p>Students build an in-game premium checkout store, learning the monetization mechanics of a Micro-SaaS Startup Venture (ala Subscription Paywalls / Stripe Webhooks).</p>
+                    </div>
+                    <div class="pipeline-item">
+                        <strong>🌐 The AI Matrix: Connecting Game Worlds</strong>
+                        <p>Kids link an AI engine to live external gaming databases, mastering real-world data integration in an intertwined Coding & Startup concept (ala Model Context Protocol / MCP Core).</p>
+                    </div>
+                    <div class="pipeline-item">
+                        <strong>📈 The Esports Live-Stream Dashboard</strong>
+                        <p>Students inject tracking scripts into games to render live player scoreboards, mastering telemetry and data analytics in a Startup-focused Coding venture (ala Live User Telemetry / Operational Analytics).</p>
+                    </div>
+                    <div class="pipeline-item">
+                        <strong>📊 The AI Cloud Tycoon: Server Bill Hack</strong>
+                        <p>Students play studio CFO to shrink game operational costs under a strict budget, mastering resource management in a joint Coding & Startup environment (ala Token Maxing / Overhead Guardrails).</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="background">
+            <h2>Advisor Background 🧠</h2>
+            <p>AURAVYBE Academy pathways are built, guided, and bootstrapped by tech pioneers led locally by <strong>Mr. PI</strong> *(aka Bala)*.</p>
+            <p style="font-style: italic; border-left: 3px solid var(--secondary); padding-left: 15px; margin-top: 15px; font-size: 0.95rem;">
+                "I am injecting my raw transactional history founding and building over eight technical startups—including one catastrophic failure that taught me far more than the sum of my successes—directly into these lab rooms. Our core directive is to gift middle and high school students with the actual toolchains, production models, and operational frameworks needed to build real value for the new AI economy." — <em>Mr. PI</em>
+            </p>
+        </section>
+
+        <div class="bio-cta">
+            <a href="mailto:balapitchaikani@gmail.com?subject=AURAVYBE%20Registration%20Inquiry" class="cta-btn">Send Registration Message</a>
+        </div>
+
+        <nav class="bottom-dock">
+            <div class="dock-container">
+                <img src="img/auravybe_logo.png" alt="AURAVYBE Emblem" style="height: 35px; width: auto; opacity: 0.95;">
+                <ul class="dock-links">
+                    <li><a href="#home">🌌 <span>Home</span></a></li>
+                    <li><a href="#concept">🚀 <span>Concept</span></a></li>
+                    <li><a href="#missions"> 🎮 <span>Missions Open</span></a></li>
+                    <li><a href="#background">🧠 <span>Background</span></a></li>
+                </ul>
+                <ul class="dock-links">
+                    <li><a href="mailto:balapitchaikani@gmail.com?subject=AURAVYBE%20Registration" class="dock-pill">📬 <span>Register</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <footer>
+            <div class="legal-footer">
+                © 2024-2026 AURAVYBE. All Rights Reserved. This material is the intellectual property of AURAVYBE. Unauthorized use, including making copies of the material even for personal use, is strictly prohibited.
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
