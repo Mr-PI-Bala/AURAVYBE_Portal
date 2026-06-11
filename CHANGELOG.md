@@ -1,5 +1,11 @@
 ﻿# CHANGELOG
 
+## [0.1.1] - 2026-06-11
+
+### Changed
+- `index.html` — July preview copy typo (`two-pathways`)
+- Baseline tag aligned to `HEAD` (PATCH closeout)
+
 ## [0.1.0] - 2026-06-11
 
 ### Added
