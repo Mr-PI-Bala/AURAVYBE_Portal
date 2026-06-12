@@ -1,6 +1,11 @@
 ﻿# CHANGELOG
 
 
+
+## [0.1.4] - 2026-06-12
+
+### Changed
+- chore: remove legacy AURAVYBE docs from archive repo
 ## [0.1.3] - 2026-06-12
 
 ### Changed
