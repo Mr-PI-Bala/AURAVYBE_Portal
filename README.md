@@ -15,5 +15,5 @@ cd C:\Users\balap\Mr-PI-Bala\AURAVYBE
 .\scripts\merit.ps1 publish
 ```
 
-See `AURAVYBE/AURAVYBE_Portal.instructions` and MERIT vault `docs/MERIT_ARCHITECTURE.md`.
+See `AURAVYBE_Portal.instructions` and MERIT vault `docs/MERIT_ARCHITECTURE.md`.
 
