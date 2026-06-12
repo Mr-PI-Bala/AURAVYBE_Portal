@@ -1,5 +1,10 @@
 ﻿# CHANGELOG
 
+
+## [0.1.3] - 2026-06-12
+
+### Changed
+- chore: MERIT archive baseline compliance
 ## [0.1.2] - 2026-06-11
 
 ### Added
@@ -24,3 +29,4 @@
 
 ### Changed
 - `index.html` — operator content updates
+
