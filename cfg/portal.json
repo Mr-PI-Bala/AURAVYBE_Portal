@@ -1,0 +1,9 @@
+﻿{
+  "product": "AURAVYBE_Portal",
+  "publishRoot": "portal",
+  "host": "here.now",
+  "slug": "",
+  "siteUrl": "",
+  "notes": "Publish: merit.ps1 publish. Only portal/ goes to here.now; app deploys via Vercel separately."
+}
+
