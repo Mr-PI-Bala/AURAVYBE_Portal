@@ -2,6 +2,11 @@
 
 
 
+
+## [0.1.5] - 2026-06-13
+
+### Changed
+- chore: refresh INDEX cert visibility block
 ## [0.1.4] - 2026-06-12
 
 ### Changed
